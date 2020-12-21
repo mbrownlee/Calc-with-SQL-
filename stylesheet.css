@@ -1,0 +1,23 @@
+.homepage {
+    background-color: rgb(126, 246, 126);
+}
+
+.btn {
+    background-color: rgb(209, 9, 209);
+    color: yellow;
+}
+
+.btn:hover {
+    background-color: orange;
+    color: black;
+}
+
+h3 {
+    color: blue;
+    border: 1px solid blue;
+}
+
+h2 {
+    color: rgb(35, 147, 147);
+   
+}

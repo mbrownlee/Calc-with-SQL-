@@ -1,6 +1,6 @@
 <html>
 
-<body>
+<body class=homepage>
     <?php
     include_once 'db_sql.php';
     $first_name = $_POST['first_name'];
@@ -10,7 +10,7 @@
     $user_ins_call = mysqli_query($init, $user_ins);
     ?>
     <form action="person.php">
-        <button type="submit" name="submit" value="submit">Add New Person</button>
+        <button type="submit" name="submit" value="submit" class="btn">Add New Person</button>
     </form>
     <?php
 
@@ -46,17 +46,20 @@
 
         <br>
 
-        <button type="submit" name="submit" value="submit">Calculate</button>
+        <button type="submit" name="submit" value="submit" class="btn">Calculate</button>
 
     </form>
     <br>
     <br>
     <br>
     <form action="results.php">
-        <button type="submit" name="submit" value="submit">Past Calculations</button>
+        <button type="submit" name="submit" value="submit" class="btn">Past Calculations</button>
     </form>
 
 
 </body>
+<style>
+    <?php include 'stylesheet.css'; ?>
+</style>
 
 </html>

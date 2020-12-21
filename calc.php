@@ -1,4 +1,5 @@
 <html>
+    <body class=homepage>
 <p>The answer is:</p>
 
 <?php
@@ -30,10 +31,21 @@ if (isset($_POST['submit'])) {
     }
 }
 
- 
+
 $user_ins = "INSERT INTO calc (num1, operator, num2, user_name_id) VALUES ('$num1', '$operator', '$num2', '$user_name_id');";
 $user_ins_call = mysqli_query($init, $user_ins);
 
 ?>
 
+<br>
+<br>
+<br>
+
+<form action="index.php">
+    <button type="submit" name="submit" value="submit" class="btn">Home</button>
+</form>
+<style>
+<?php include 'stylesheet.css'; ?>
+</style>
+</body>
 </html>

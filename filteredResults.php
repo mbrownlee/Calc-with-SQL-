@@ -15,7 +15,8 @@ while ($row = mysqli_fetch_array($result3)) {
     echo $row['first_name'] . " used " . $row['num1'] . " & " . $row['num2'] . " and performed " . $row['operator'] . "</br>";
 }
     ?>
-
+<form action="index.php">
+            <button type="submit" name="submit" value="submit" class="btn">Home</button>
   
 </body>
 <style>

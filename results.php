@@ -68,27 +68,16 @@
     $query3 = "SELECT first_name, id FROM user_name;";
     $result3 = mysqli_query($init, $query3);
     ?>
-    <form method="post">
+    <form action="filteredResults.php" method="post">
         Filter by: <select name="id" value=$row[id]>
             <?php
             while ($row = mysqli_fetch_array($result3)) {
-                echo "<option value='select'" . $row['id'] . ">" . $row['first_name'] . "</option>";
+                echo "<option value=" . $row['id'] . ">" . $row['first_name'] . "</option>";
             }
             ?>
         </select>
         <button type="submit" name="submit" value="submit" class="btn">Filter</button>
-        <br>
-        <?php
         
-        $selectedOption = ['first_name'];
-        $sql2 = "SELECT calc.user_name_id, user_name.first_name, calc.num1, calc.num2, calc.operator  FROM calc INNER JOIN user_name ON calc.user_name_id = user_name.id WHERE user_name.first_name='$selectedOption' ";
-        $result3 = mysqli_query($init, $sql2);
-        echo $selectedOption;
-        
-    while ($row = mysqli_fetch_array($result3)) {
-        echo $selectedOption . " used " . $row['num1'] . " & " . $row['num2'] . " and performed " . $row['operator'] . "</br>";
-    }
-        ?>
         <br>
         <br>
         <br>

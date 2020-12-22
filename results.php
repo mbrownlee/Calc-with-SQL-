@@ -69,7 +69,7 @@
     $result3 = mysqli_query($init, $query3);
     ?>
     <form action="filteredResults.php" method="post">
-        Filter by: <select name="id" value=$row[id]>
+        Filter by person: <select name="id" value=$row[id]>
             <?php
             while ($row = mysqli_fetch_array($result3)) {
                 echo "<option value=" . $row['id'] . ">" . $row['first_name'] . "</option>";
@@ -77,11 +77,16 @@
             ?>
         </select>
         <button type="submit" name="submit" value="submit" class="btn">Filter</button>
-        
+    </form>
+        <br>
+        <br>
+        <form action="filteredDateResults.php" method="post">
+        Filter by date calculated: <input type="date" name="created_date" >
+        <button type="submit" name="submit" value="submit" class="btn">Date Filter</button>
+        </form>
         <br>
         <br>
         <br>
-
         <form action="index.php">
             <button type="submit" name="submit" value="submit" class="btn">Home</button>
         </form>
